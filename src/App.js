@@ -7,6 +7,7 @@ import { Calculator } from './Pages/Calculator/calculator';
 import { Notfound404 } from './Pages/NotFound/notfound404';
 import { News } from  './Pages/News/news';
 import {Header} from "./Components/Header/header";
+import {Footer} from "./Components/Footer/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/calculator" element={<Calculator />} />
               <Route path="*" element={<Notfound404 />} />
           </Routes>
+          <Footer />
       </div>
   );
 }

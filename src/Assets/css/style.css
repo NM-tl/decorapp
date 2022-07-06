@@ -16,6 +16,13 @@ header {
     padding: 2.5em;
 }
 
+.page-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 2.5px;
+}
+
 /* HOME/INTRO PAGE STYLE */
 
 .intro {
@@ -41,17 +48,45 @@ header {
 }
 
 .intro-grid {
-    margin-top: 17.5em;
+    margin-top: 7.5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    align-items: start;
+}
+
+.intro-text__hero {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: baseline;
+}
+
+.intro-text__hero h1 {
+    font-size: 25vh;
+    font-weight: 100;
+    margin: 0;
+}
+
+
+.intro-text__hero h1:last-child {
+    font-size: 10vh;
+    font-style: italic;
+    font-weight: 100;
+    margin-left: -35px;
+}
+
+.intro-text__after {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .intro-text__wrapper {
     max-width: 37.5em;
-    grid-area: 1 / 2 / 2 / 3;
 }
 
 .intro-text__wrapper h1 {
@@ -88,7 +123,13 @@ header {
 }
 
 .intro-scroll:hover {
-    background: #060606;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #00FFFF, #004c4c);
+    box-shadow:  20px 20px 60px #004c4c,
+    -20px -20px 60px #00FFFF;
     transform: scale(1.05);
     transition: 200ms;
 }
@@ -129,19 +170,354 @@ header {
 
 .benefits-item {
     padding: 2.5em 1.5em;
-    border-radius: 25px;
-    background: linear-gradient(145deg, #f0f0f0, #cacaca);
-    box-shadow:  20px 20px 60px #bebebe,
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px rgb(0 76 76 / 40%),
     -20px -20px 60px #ffffff;
 }
 
-.benefits-item__title {
+.benefits-item__title, .news-title {
     padding: 0 1em;
 }
 
-.benefits-item__text {
+.benefits-item__text, .news-text {
     padding: 0 2.5em;
 }
+
+/* CAROUSEL SECTION STYLE */
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 76, 76, 0.5) 100%);
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* FOOTER STYLE */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 70vh;
+    color: white;
+    align-items: center;
+    background: #131313;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.call-action {
+    font-size: 64px;
+    margin-bottom: 1.5em;
+}
+
+.call-action__btn {
+    padding: 20px 40px;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #050505, #060606);
+    box-shadow:  5px 5px 50px #050505,
+    -5px -5px 50px #070707;
+}
+
+.call-action__btn:hover {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #00FFFF, #004c4c);
+    box-shadow:  20px 20px 60px #004c4c,
+    -20px -20px 60px #00FFFF;
+    transform: scale(1.05);
+    transition: 200ms;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.dev {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer-tags {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.to-top__btn {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* NEWS PAGE STYLE */
+
+.ticker {
+    text-transform: uppercase;
+    background-color: aqua;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.news-container {
+    margin-top: 3.75em;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3.75em;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+}
+
+.news-item {
+    padding: 50px 30px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px rgb(0 76 76 / 40%),
+    -20px -20px 60px #ffffff;
+}
+
+.news-nav {
+    display: flex;
+    margin-top: 3.75em;
+    align-items: center;
+    width: 18.75em;
+    justify-content: space-between;
+}
+
+.news-nav a{
+    color: #060606;
+}
+
+/* ABOUT PAGE STYLE */
+
+.page-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.page-intro {
+    padding-top: 10em;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-inner {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.intro-inner p {
+    font-style: italic;
+}
+
+.intro-text {
+    font-size: 72px;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-text h1, .awards-header h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+}
+
+.intro-text h3, .awards-header h3 {
+    margin: -40px 0 0;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.team-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(  rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/src/Assets/images/bg-about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    align-content: center;
+}
+
+.team-header h1{
+    font-size: 200px;
+    text-transform: uppercase;
+    color: black;
+    margin: 0;
+}
+
+.team-header h1:first-child {
+    z-index: 1;
+}
+
+.team-header h1:last-child {
+    margin: -100px 0 0;
+    color: white;
+    background-color: aqua;
+}
+
+.team-grid {
+    padding: 0 2.5em;
+    margin-top: 3.75em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+}
+
+.team-unit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.team-unit:last-child {
+    flex-direction: row-reverse;
+}
+
+.unit-bio {
+    width: 600px;
+}
+
+.unit-photo {
+    background-image: url("/src/logo.svg");
+    width: 300px;
+    height: 420px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #060606;
+}
+
+.awards-header {
+    font-size: 72px;
+    margin: 1.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.awards-container {
+    padding: 0 2.5em;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.award-item {
+    border-top: 1px solid black;
+    padding: 10px 0;
+}
+
+.award-item:last-child {
+    border-bottom: 1px solid black;
+}
+
+.conclusion {
+    font-size: 48px;
+    margin: 3.75em 2.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.conclusion-header {
+    display: flex;
+    width: 1180px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conclusion-header h1, .conclusion-header h3 {
+    margin: 0;
+}
+
+.conclusion-header h3 {
+    font-style: italic;
+    font-size: 72px;
+    background-color: aqua;
+}
+
+.conclusion-header h3:last-child{
+    font-size: 48px;
+}
+
+/*.intro-text {*/
+/*    font-size: 72px;*/
+/*    margin-bottom: 1.5em;*/
+/*}*/
+
+/*.intro-text h1, .awards-header h1 {*/
+/*    text-transform: uppercase;*/
+/*    font-weight: 600;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.intro-text h3, .awards-header h3 {*/
+/*    margin: -40px 0 0;*/
+/*    font-weight: 100;*/
+/*    font-style: italic;*/
+/*}*/
+
 
 /* ERROR PAGE STYLE */
 
@@ -174,11 +550,13 @@ header {
 }
 
 .error-btn__home:hover {
+    text-transform: uppercase;
+    font-weight: bold;
     color: white;
     border-radius: 50px;
-    background: linear-gradient(145deg, #ffe556, #e6c148);
-    box-shadow:  20px 20px 60px #d9b644,
-    -20px -20px 60px #fff65c;
+    background: linear-gradient(145deg, #00FFFF, #004c4c);
+    box-shadow:  20px 20px 60px #004c4c,
+    -20px -20px 60px #00FFFF;
     transform: scale(1.05);
     transition: 200ms;
 }
