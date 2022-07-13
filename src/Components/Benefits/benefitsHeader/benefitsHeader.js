@@ -2,9 +2,9 @@ import React from "react";
 
 export function BenefitsHeader() {
     return (
-        <div className="benefits-container" name="benefits">
-            <h1 className="benefits-title">Our Benefits</h1>
-            <div className="company-logo"></div>
+        <div className="section-title">
+            <h1>Our</h1>
+            <h1>Benefits</h1>
         </div>
     );
 }

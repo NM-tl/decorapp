@@ -6,11 +6,13 @@ export function Benefits() {
     return(
         <div className="benefits">
             <div className="wrapper">
-                <BenefitsHeader />
-                <div className="benefits-grid">
-                    <BenefitsItem />
-                    <BenefitsItem />
-                    <BenefitsItem />
+                <div className='benefits-container'>
+                    <BenefitsHeader />
+                    <div className="benefits-grid">
+                        <BenefitsItem />
+                        <BenefitsItem />
+                        <BenefitsItem />
+                    </div>
                 </div>
             </div>
         </div>

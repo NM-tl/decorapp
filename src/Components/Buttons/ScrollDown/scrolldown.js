@@ -2,6 +2,9 @@ import React from "react";
 
 export function ScrollDown() {
     return (
-        <a href="#benefits" className="intro-scroll">Scroll to discover &darr;</a>
+        <div className='scroll'>
+            <div className="scroll-down__text">scroll down</div>
+            <div className="scroll-down"></div>
+        </div>
     );
 }
